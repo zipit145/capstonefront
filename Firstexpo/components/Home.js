@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import {createStackNavigator} from 'react-navigation';
 
 class HomeScreen extends React.Component {
+    
     static navigationOptions = {
       title: 'G4',
     };

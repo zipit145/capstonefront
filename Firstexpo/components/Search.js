@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import {createStackNavigator} from 'react-navigation';
 
 class Search extends React.Component {
     static navigationOptions = {

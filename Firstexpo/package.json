@@ -10,7 +10,10 @@
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-native-camera": "^1.9.1",
+    "react-native-tesseract-ocr": "^1.0.10",
+    "react-navigation": "^3.0.9",
+    "tesseract.js": "^1.0.14"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

@@ -8,11 +8,11 @@ class Search extends React.Component {
     render() {
       return (
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>Details Screen</Text>
+          <Text>Camera screen Screen</Text>
           <TextInput>This is text input</TextInput>
           <Button
             title="Go to Camera"
-            onPress={() => this.props.navigation.navigate('Camera')}
+            onPress={() => this.props.navigation.navigate('Search')}
           />
         </View>
       );

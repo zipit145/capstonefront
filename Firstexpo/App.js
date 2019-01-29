@@ -14,13 +14,16 @@ import RNTesseractOcr from 'react-native-tesseract-ocr';
 const AppNavigator = createStackNavigator(
   
   {
-    Home: {screen: HomeScreen},
+    Home: {
+      screen: HomeScreen,
+    },
     Search: Search,
     Camera: Camera1,
   },
   {
     initialRouteName: "Home"
-  }
+  },
+  
 );
 
 const AppContainer = createAppContainer(AppNavigator);
@@ -39,7 +42,7 @@ export default class App extends React.Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
   render() {
-    return <AppContainer />;
+    return <AppContainer/>;
   }
 }
 

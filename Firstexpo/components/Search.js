@@ -8,9 +8,9 @@ class Search extends React.Component {
       };
     render() {
       return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>Details Screen</Text>
-          <TextInput>This is text input</TextInput>
+        <View style={styles.container}>
+          <Text>Please Enter a Search Term</Text>
+          <TextInput  style={styles.inp}>Development</TextInput>
           <Button
             title="Go to Camera"
             onPress={() => this.props.navigation.navigate('Camera')}
@@ -19,5 +19,21 @@ class Search extends React.Component {
       );
     }
 }
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: '#ADD8E6',
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  inp: {
+      textAlign: 'center',
+      backgroundColor: '#FFF',
+      marginBottom: 10,
+      minWidth: 150,
+      borderRadius: 4,
+      borderWidth: 1,
+  }
+});
 
 export default Search

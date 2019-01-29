@@ -34,7 +34,10 @@ const styles = StyleSheet.create({
       color: '#FFF',
       fontWeight: '600',
       fontSize: 17,
-    }
+    },
+    img: {
+      maxWidth: '100%',
+    },
   });
 
 export default class Camera1 extends React.Component {
@@ -44,17 +47,7 @@ export default class Camera1 extends React.Component {
     type: Camera.Constants.Type.back,
     path: null,
   };
-  captureText() {
-    RNTesseractOcr.recognize(imgPath, lang, tessOptions)
-        .then((result) => {
-            this.setState({ ocrResult: result });
-            console.log("OCR Result: ", result);
-        })
-        .catch((err) => {
-            console.log("OCR Error: ", err);
-        })
-        .done();
-  }
+
 
   takePicture = async () => {
     try {
@@ -66,6 +59,9 @@ export default class Camera1 extends React.Component {
       console.log('err: ', err);
     }
   };
+  sendPicture = () => {
+    console.log(this.state.path)
+  }
 
   renderCamera() {
     return (
@@ -95,10 +91,8 @@ export default class Camera1 extends React.Component {
   renderImage() {
     return (
       <View>
-          <Text>Here</Text>
         <Image
-          source={{ uri: this.state.path }}
-          style={styles.preview}
+          source={require('./phonephoto.jpg')} style={{width: 410, height: 600}}
         />
         <Text
           style={styles.cancel}
